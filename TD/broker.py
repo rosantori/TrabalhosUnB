@@ -2,7 +2,7 @@ import socket
 import time
 import paho.mqtt.client as mqtt 
 
-HOST = "192.168.1.143"           # Endereco IP do Servidor
+HOST = input("Digite o host:")          # Endereco IP do Servidor
 PORT = 1883            # Porta que o Servidor esta
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -10,7 +10,6 @@ orig = (HOST, PORT)
 s.bind(orig)
 s.listen(1)
 while True:
-    print("a")
     con, cliente = s.accept()
     print ("Conectado por", cliente)
     while True:
