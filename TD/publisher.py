@@ -1,7 +1,7 @@
 import paho.mqtt.client as mqtt
 import time
 
-broker_host =  "192.168.0.169" #default
+broker_host =  "192.168.1.143" #default
 broker_port = 1883 #default
 
 client = mqtt.Client()

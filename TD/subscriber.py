@@ -1,10 +1,11 @@
 import paho.mqtt.client as mqtt
+import time
 
 def on_connect(client, userdata, flags, rc):
     print("Connection status: ", connack_str(rc))
 
 
-broker_host =  "192.168.0.169" #default
+HOST = input("Digite o host:") #default
 broker_port = 1883 #default
 
 client = mqtt.Client()
