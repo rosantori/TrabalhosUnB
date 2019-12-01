@@ -2,7 +2,7 @@ import socket
 import time
 import paho.mqtt.client as mqtt 
 
-HOST = input("Digite o host:")          # Endereco IP do Servidor
+HOST = input("Digite o host (recomendado -> 192.168.1.143):")          # Endereco IP do Servidor
 PORT = 1883            # Porta que o Servidor esta
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -19,4 +19,6 @@ while True:
         
         
     print ('Finalizando conexao do cliente', cliente)
+    input("Digite algo para finalizar a conexão: ")
     con.close()
+s.close()
